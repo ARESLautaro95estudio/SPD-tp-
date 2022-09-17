@@ -1,0 +1,59 @@
+
+// C++ code
+//Kevin Veliz
+//Ivan Vio
+//Lautaro Marguery
+
+#define PIN 10
+#define PIN_OCHO 8
+
+
+
+void setup()
+{
+  pinMode(PIN_OCHO, OUTPUT);
+  pinMode(PIN, OUTPUT);
+  
+  Serial.begin(9600);
+}
+
+int contador = 0;
+int bandera = 0;
+
+void loop()
+{
+  digitalWrite(PIN, HIGH);
+  
+  
+  
+  
+  if(digitalRead(PIN_OCHO) == HIGH)
+  {
+    digitalWrite(LED_BUILTIN, HIGH); 
+	
+   
+    
+    bandera = 1;
+    //delay(300);
+    //contador++;
+    //Serial.print(contador);
+  }
+ 
+  
+  if(bandera)
+  {
+    digitalWrite(PIN,LOW);
+    //delay(300);
+    contador++;
+    Serial.print(contador);
+    bandera = 0;
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+}
